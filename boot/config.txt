@@ -1,0 +1,12 @@
+kernel=zImage
+device_tree=bcm2711-rpi-4-b.dtb
+dtparam=audio=on
+dtoverlay=vc4-kms-v3d-pi4
+max_framebuffers=2
+#dtoverlay=dwc2,dr_mode=peripheral
+initramfs ramdisk.img 0x01f00000
+enable_uart=1
+
+# Can Bus
+dtparam=spi=on
+dtoverlay=2xMCP2517FD
