@@ -27,10 +27,10 @@ Create a cheap and reliable hardware emulator for Android Automotive development
 ```
 
 # Make changes to local manifest
-  * edit .repo/local_manifests/defualt.xml
-  * add remote <remote name="arpicar" fetch="https://github.com/manmountain"/>
-  * change <project path="device/arpi/rpi4" name="device_arpi_rpi4" revision="arpi-10" remote="arpi"/>
-  * to <project path="device/arpi/rpi4car" name="device_arpi_rpi4car" revision="arpi-10" remote="arpicar"/>
+  * edit `.repo/local_manifests/defualt.xml`
+  * add remote `<remote name="arpicar" fetch="https://github.com/manmountain"/>`
+  * change `<project path="device/arpi/rpi4" name="device_arpi_rpi4" revision="arpi-10" remote="arpi"/>`
+  * to `<project path="device/arpi/rpi4car" name="device_arpi_rpi4car" revision="arpi-10" remote="arpicar"/>`
 
 # Get the AOSP source 
 ```
