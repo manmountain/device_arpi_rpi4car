@@ -66,8 +66,9 @@ Create a cheap and reliable hardware emulator for Android Automotive development
 ```
   $ mkdir kmods
   $ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- INSTALL_MOD_PATH=kmods modules_install
-  $ cp kmods/lib/modules/5.4.47-v7l+/kernel/drivers/net/can/can-dev.ko ../../device/arpi/rpi4car/modules/
-  $ cp kmods/lib/modules/5.4.47-v7l+/kernel/drivers/net/can/spi/mcp25xxfd/mcp25xxfd.ko ../../device/arpi/rpi4car/modules/
+  $ mkdir ../../device/arpi/rpi4car/modules/
+  $ cp kmods/lib/modules/5.4.49-v7l+/kernel/drivers/net/can/can-dev.ko ../../device/arpi/rpi4car/modules/
+  $ cp kmods/lib/modules/5.4.49-v7l+/kernel/drivers/net/can/spi/mcp25xxfd/mcp25xxfd.ko ../../device/arpi/rpi4car/modules/
   $ rm -rf kmods
   $ cd ../..
 ```
