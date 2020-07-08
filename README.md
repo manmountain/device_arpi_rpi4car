@@ -1,14 +1,14 @@
 # Android Automotive Rapberry Pi 4 
 
-## TODO
-  * WiFi ✔️
-  * Can-Bus ✅
-  * Vehicle Hal ⚙️
-  * Secondary screen ❌
-  * GPS ➖
-  * Bluetooth ❌
-  * Camera Support ➖
-  * Support more Can-Bus Hat's ⚙️
+## 📝 TODO
+  * ✔️ WiFi
+  * ✅ Can-Bus
+  * ⚙️ Vehicle Hal
+  * ❌ Secondary screen / Instrument Cluster 
+  * ➖ GPS
+  * ❌ Bluetooth
+  * ➖ Camera Support
+  * ⚙️ Support more Can-Bus Hat's
 
 ## Initialize AOSP source
 ```
@@ -64,9 +64,6 @@
   $ ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- make -j4 dtbs
 ```
 
-## Checks we can do to verify that the can-bus works
-  * TODO
-
 ## Build Android source
 ```
   $ source build/envsetup.sh
@@ -81,3 +78,6 @@
   $ device/arpi/rpi4car/mksdcard.sh <device>
 ```
 
+## Checks we can do to verify that the can-bus works
+  * TODO
+  
