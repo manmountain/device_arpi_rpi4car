@@ -10,11 +10,13 @@
   * Camera Support ➖
   * Support more Can-Bus Hat's ⚙️
 
-  * ✔️ working
-  * ✅ working but need some love
-  * ⚙️ ongoing development
-  * ❌ not working
-  * ➖ not tested / unknown status
+| Icon        | Status        |
+| ----------- |:-------------:|
+| ✔️ | working |
+| ✅ | working but need work |
+| ⚙️ | ongoing development |
+| ❌ | not working |
+| ➖ | not tested |
 
 # Initialize AOSP source
 ```
