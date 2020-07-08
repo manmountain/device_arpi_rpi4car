@@ -32,6 +32,7 @@
   * to `<project path="device/arpi/rpi4car" name="device_arpi_rpi4car" revision="arpi-10" remote="arpicar"/>`
   * add remote `<remote name="linux-can" fetch="https://github.com/linux-can"/>`
   * add `<project path="vendor/can/can-utils" name="can-utils" revision="master" remote="linux-can"/>`
+=======
 
 # Get the AOSP source 
 ```
@@ -72,10 +73,19 @@
 
 # Get can-utils
 ```
+<<<<<<< HEAD
   $ cd device/arpi/rpi4car/
   $ git clone https://github.com/linux-can/can-utils/
   $ mv can-utils-master can-utils
   $ uncomment can-utils section in rp4car.mk
+=======
+  $ mkdir kmods
+  $ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- INSTALL_MOD_PATH=kmods modules_install
+  $ mkdir ../../device/arpi/rpi4car/modules/
+  $ cp kmods/lib/modules/5.4.49-v7l+/kernel/drivers/net/can/can-dev.ko ../../device/arpi/rpi4car/modules/
+  $ cp kmods/lib/modules/5.4.49-v7l+/kernel/drivers/net/can/spi/mcp25xxfd/mcp25xxfd.ko ../../device/arpi/rpi4car/modules/
+  $ rm -rf kmods
+>>>>>>> 793ef0f07e48bb0a2816aff5f921b7cb7f2a8d2e
   $ cd ../..
 ```
 
