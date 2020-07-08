@@ -58,11 +58,6 @@ BOARD_HOSTAPD_PRIVATE_LIB   := lib_driver_cmd_bcmdhd
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 BOARD_WPA_SUPPLICANT_DRIVER := NL80211
 
-# CAN-Bus drivers
-BOARD_VENDOR_KERNEL_MODULES := \
-    device/arpi/rpi4car/modules/can-dev.ko \
-    device/arpi/rpi4car/modules/mcp25xxfd.ko 
-
 USE_CAMERA_STUB := true
 
 BOARD_SEPOLICY_DIRS := \

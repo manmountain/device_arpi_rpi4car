@@ -1,0 +1,4 @@
+# Allow init to run sh 
+# We need this for one shot setup of the can network
+
+init_daemon_domain(shell)
