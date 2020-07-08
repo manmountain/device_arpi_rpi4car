@@ -1,9 +1,5 @@
 #import /vendor/etc/init/hw/init.rpi4.usb.rc
-
-# Load Kernel modules for canbus
-on early-init
-    exec u:r:modprobe:s0 -- /vendor/bin/modprobe -a -d \
-        /vendor/lib/modules can-dev.ko mcp25xxfd.ko
+import init.can.rc # can-bus
 
 on init
     # mount debugfs
@@ -49,7 +45,7 @@ on boot
     setprop status.battery.level 5
     setprop status.battery.level_raw  50
     setprop status.battery.level_scale 9
-
+# start adb
     setprop service.adb.tcp.port 5555
     start adbd
 
@@ -64,3 +60,4 @@ service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
     socket wpa_wlan0 dgram 660 wifi wifi
     disabled
     oneshot
+

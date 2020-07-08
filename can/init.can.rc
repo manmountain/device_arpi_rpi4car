@@ -1,0 +1,9 @@
+# Load Can-bus Kernel modules 
+#on early-init
+#    exec u:r:modprobe:s0 -- /vendor/bin/modprobe -a -d \
+#        /vendor/lib/modules can.ko can-bcm.ko can-gw.ko can-raw.ko can-dev.ko mcp25xxfd.ko
+
+# Set up the can network
+service can /system/bin/sh /system/etc/setup-can.sh
+    class core
+    oneshot

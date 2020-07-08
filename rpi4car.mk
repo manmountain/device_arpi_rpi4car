@@ -168,4 +168,5 @@ ifeq (,$(INCLUDED_ANDROID_CAR_TO_PRODUCT_BOOT_JARS))
    INCLUDED_ANDROID_CAR_TO_PRODUCT_BOOT_JARS := yes
 endif
 
+$(call inherit-product, $(LOCAL_PATH)/can.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
